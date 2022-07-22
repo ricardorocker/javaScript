@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>DOM</title>
+</head>
+
+<body class="bg-dark text-light ml-2">
+    <h1 class="mt-2 mb-4">DOM Eventos - Somando </h1>
+    Digite seu pais:
+    <input type="text" name="pais" id="pais">
+    <input type="button" value="Consultar" name="consultar" onclick="consultarPais()">
+    <div id="resultado" class="mt-2">Resultado</div>
+    
+    <script>
+        function consultarPais(){
+            var paisOrigem = document.querySelector("input", pais);
+            var resultado = document.getElementById("resultado");
+
+            var txtpais = String(paisOrigem.value);
+
+            if(txtpais === "Brasil"){
+                resultado.innerHTML = `Como voce nasceu no ${txtpais} voce é Brasileiro!`
+            } else {
+                resultado.innerHTML = `Como voce nasceu no ${txtpais} voce é estrangeiro!`
+            }
+        }
+    </script>
+
+</body>
+
+</html>
