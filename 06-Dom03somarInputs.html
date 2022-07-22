@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>DOM</title>
+</head>
+
+<body class="bg-dark text-light ml-2">
+    <h1 class="mt-2 mb-4">DOM Eventos - Somando </h1>
+    <input type="number" name="txtN1" id="txtN1"> +
+    <input type="number" name="txtN2" id="txtN2">
+    <input type="button" value="Somar" onclick="somar()">
+    <div id="resultado" class="mt-2">Resultado</div>
+    <script>
+        function somar(){
+            var txtN1 = document.querySelector("input#txtN1");
+            var txtN2 = document.getElementById("txtN2");
+            var n1 = Number(txtN1.value);
+            var n2 = Number(txtN2.value);
+
+            var soma = n1 + n2;
+
+            var resultado = document.querySelector("div#resultado"); 
+
+            resultado.innerHTML = `A soma de ${n1} + ${n2} é igual a <strong>${soma}</strong>.`;
+        }
+    </script>
+
+</body>
+
+</html>

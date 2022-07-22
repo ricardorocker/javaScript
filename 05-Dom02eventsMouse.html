@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>DOM</title>
+</head>
+<body class="bg-dark text-light ml-2">
+    <h1 class="mt-2 mb-4">DOM Mouse Interações</h1>
+    <div id="boxAnimation" class="card" 
+    style="width: 10em; height: 10em; background-color:gray; 
+    line-height: 10em; text-align: center;">
+    <!-- onclick="clicar()"  onmouseenter="aoEntrar()" onmouseleave="aoSair()" -->
+    Interaja...
+    </div>
+
+    <script>
+        var box = document.querySelector("div#boxAnimation");
+        box.addEventListener("click", clicar);
+        box.addEventListener("mouseenter", aoEntrar);
+        box.addEventListener("mouseleave", aoSair);
+        function clicar(){
+            // var box = document.querySelector("div#boxAnimation");
+            box.innerHTML = "Clicou";
+            box.style.background = "green";
+        }
+
+        function aoEntrar(){
+            // var box = document.querySelector("div#boxAnimation");
+            box.innerHTML = "Entrou";
+            box.style.background = "black";
+        }
+
+        function aoSair(){
+            // var box = document.querySelector("div#boxAnimation");
+            box.innerHTML = "Saiu";
+            box.style.background = "grey";
+        }
+    </script>
+
+</body>
+</html>
