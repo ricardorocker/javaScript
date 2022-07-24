@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>DOM</title>
+</head>
+
+<body class="bg-dark text-light ml-2">
+    <h3 class="mt-2 mb-4">Condições Compostas: IF e SWITCH </h1>
+    Digite a hora: <input type="text" id="txtHora">
+    <input type="button" value="Consultar Hora" onclick="consultarHora()">
+    <div id="resultado" class="mt-4">Hora</div>
+
+    <script>
+        var data = new Date();
+        var horaAtual = data.getHours();
+        var txtHora = document.getElementById("txtHora");
+        var hora = Number(txtHora.value);
+        var resultado = document.querySelector("div", resultado);
+
+        resultado.innerHTML = `Agora são ${horaAtual} HORAS`
+        
+        function consultarHora(){
+            if(hora === 7){
+                resultado.innerHTML = `Levantar e tomar banho!`
+            } else if(hora === 10){
+                resultado.innerHTML = `Estar na igreja!`
+            } else {
+                resultado.innerHTML = `Hora de estar estudando! ${hora.typeOf}`
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
