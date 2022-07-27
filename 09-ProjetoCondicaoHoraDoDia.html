@@ -15,12 +15,22 @@
         <strong class="h1">Hora do Dia</strong>
     </header>
     <section class="shadow-lg p-3 mb-5 bg-white rounded bg-light mx-5 p-2">
-        <div class="m-4 text-center">Agora são 3 horas</div>
+        <div id="horaAtualTxt" class="m-4 text-center">Agora são 3 horas</div>
         <div class="m-4 text-center">
             <img src="Modelo.jpg" alt="" style="width: 16em; height: 16em;" class="rounded-circle">
         </div>
     </section>
     <footer class="m-4 text-white text-center">@RicardoRocker</footer>
+
+    <script>
+        var data = new Date();
+        var horaAtual = data.getHours();
+
+        var horaAtualTxt = document.querySelector("div", horaAtualTxt);
+
+        horaAtualTxt.innerHTML = `Agora são ${horaAtual} horas`
+
+    </script>
 </body>
 
 </html>
