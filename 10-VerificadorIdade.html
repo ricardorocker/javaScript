@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Ricardo Rocker</title>
+</head>
+
+<body class="bg-secondary">
+    <header class="m-4 text-white text-center">
+        <strong class="h1">Verificador de Idade</strong>
+    </header>
+    <section class="shadow-lg p-3 mb-5 bg-white rounded bg-light mx-5 p-2">
+        <div class="my-2">
+            <span class="mr-2">Ano de Nascimento</span>
+            <input id="anoNascimentoTxt" type="number" class="d-relative" name="" id="">
+        </div>
+        <div class="my-2">
+            <span class="mr-2">Sexo:</span>
+            <input type="radio" class="m-1" name="radSex" id="masculino" checked>Masculino
+            <input type="radio" class="m-1" name="radSex" id="feminino">Feminino
+        </div>
+        <div>
+            <button type="button" class="my-2 btn btn-secondary" onclick="verificarIdade()">Verificar</button>
+        </div>
+        <div id="resultado" class="alert alert-secondary small">Preencha os dados acima para ver o resultado!</div>
+    </section>
+    <footer class="m-4 text-white text-center">@RicardoRocker</footer>
+
+    <script src="10-VerificadorIdade.js">
+
+    </script>
+</body>
+
+</html>
