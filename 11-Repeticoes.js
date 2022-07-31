@@ -34,13 +34,12 @@ var i = 1;
 } while(i < 6);
 
 // Método com For
-var metodoFor = document.getElementById("metodoFor")
-var toAdd = document.createDocumentFragment();
+var metodoFor = document.getElementById("metodoFor");
 for (i = 1 ; i < 6 ; i++){
     var newDiv = document.createElement("div");
     newDiv.id = "metodoFor" + i;
     newDiv.className = "text-aline";
-    newDiv.innerHTML = `Essa é a ${i}ª vez usando o For`
+    newDiv.innerHTML = `Essa é a ${i}ª vez usando o For`;
     metodoFor.appendChild(newDiv);
 }
 
