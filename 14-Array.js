@@ -1,8 +1,10 @@
 
 let resultadoArray = document.querySelector("select#resultadoArray");
+let ordenado = document.querySelector("div#ordenado");
+
 let primeiroArray = [];
 
-function adicionarNumero(){
+function adicionarNumero() {
 
   let numeroTxt = document.getElementById("numeroTxt");
   let numero = Number(numeroTxt.value);
@@ -21,12 +23,19 @@ function adicionarNumero(){
 
 }
 
-// primeiroArray.sort;
+function ordenar() {
+  primeiroArray.sort();
+  ordenado.innerHTML = `A array ordenada é [ ${primeiroArray} ]`;  
 
-// 'for(let pos in primeiroArray) {
-//   `A posição ${pos} tem o valor ${primeiroArray[pos]}`;
-// }'
+  for (let pos in primeiroArray) {
+    let newDiv = document.createElement("div");
+    // newDiv.className = "bg-secondary";
+    newDiv.id = "posicao" + pos;
+    newDiv.innerHTML = `A posição ${pos} tem o valor ${primeiroArray[pos]}`;
+    ordenado.appendChild(newDiv);
+  }
+}
 
-function limpar(){
- resultadoArray.innerHTML = "";
+function limpar() {
+  resultadoArray.innerHTML = "";
 }
