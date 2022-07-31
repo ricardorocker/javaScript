@@ -6,10 +6,10 @@ let primeiroOption = document.querySelector("option#primeiroOption");
 let primeiroArray = [];
 
 function validarNumero(n){
-  if(n > 0 || n < 100){
-    return false;
-  } else {
+  if(n > 0 && n < 101){
     return true;
+  } else {
+    return false;
   }
 }
 
@@ -19,7 +19,7 @@ function adicionarNumero() {
   let numero = Number(numeroTxt.value);
 
   // ---------->> FUNÇÃO COM PARAMETRO <<----------
-  if ( validarNumero(numero)) {
+  if ( !validarNumero(numero) ) {
     window.alert("Número inválido.");
   } else {
     primeiroArray.push(numero);
@@ -68,8 +68,8 @@ function finalizar() {
     }
 
     document.getElementById("frase1").innerHTML = `Ao todo temos ${tamanhoArray} números cadastrados.`
-    document.getElementById("frase2").innerHTML = `O maior valor informado foi ${primeiroArray[tamanhoArray - 1]}.`
-    document.getElementById("frase3").innerHTML = `O menor valor informado foi ${primeiroArray[0]}.`
+    document.getElementById("frase2").innerHTML = `O maior valor informado foi ${Math.max(...primeiroArray)}.`
+    document.getElementById("frase3").innerHTML = `O menor valor informado foi ${Math.min(...primeiroArray)}.`
     document.getElementById("frase4").innerHTML = `Somando todos os valores temos ${resultadoSoma}.`
     document.getElementById("frase5").innerHTML = `A média dos valores digitados é ${media}.`
 
