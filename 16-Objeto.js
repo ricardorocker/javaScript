@@ -1,63 +1,4 @@
-
-// let resultadoArray = document.querySelector("select#resultadoArray");
-
-// let primeiroOption = document.querySelector("option#primeiroOption");
-
-// function validarArray(array){
-//   if(array.length === 0){
-//     return true;
-//   } else {
-//     return false;
-//   }
-// }
-
-// function finalizar() {
-//   if (validarArray(primeiroArray)) {
-//     window.alert("Nenhum número inserido.");
-//   } else {
-
-//     primeiroArray.sort();
-
-//     let tamanhoArray = primeiroArray.length;
-
-//     let resultadoSoma = 0;
-//     let i = 0;
-
-//     for (i in primeiroArray) {
-//       let somando = primeiroArray[i];
-//       resultadoSoma += somando;
-//     }
-
-//     let media = resultadoSoma / tamanhoArray;
-
-//     for (i = 0; i < 5; i++) {
-//       let frase = document.createElement("div");
-//       frase.id = "frase" + i;
-//       ordenado.appendChild(frase);
-//     }
-
-//     document.getElementById("frase1").innerHTML = `Ao todo temos ${tamanhoArray} números cadastrados.`
-//     document.getElementById("frase2").innerHTML = `O maior valor informado foi ${Math.max(...primeiroArray)}.`
-//     document.getElementById("frase3").innerHTML = `O menor valor informado foi ${Math.min(...primeiroArray)}.`
-//     document.getElementById("frase4").innerHTML = `Somando todos os valores temos ${resultadoSoma}.`
-//     document.getElementById("frase5").innerHTML = `A média dos valores digitados é ${media}.`
-
-//   }
-// }
-
-// function limpar() {
-//   ordenado.innerHTML = "";
-//   resultadoArray.innerHTML = "";
-//   primeiroOption.innerHTML = "Insira um número acima: ";
-//   resultadoArray.appendChild(primeiroOption);
-
-//   for( i = 0 ; primeiroArray.length > 0 ; i++ ){
-//     primeiroArray.pop();
-//   }
-// }
-
-
-
+let motoristas = [];
 
 function validarMotorista(motorista) {
   if (motorista == "" || motorista == null || motorista == undefined) {
@@ -71,7 +12,6 @@ function validarMotorista(motorista) {
 function adicionarMotorista() {
   let motoristaTxt = document.getElementById("motoristasTxt");
   let motorista = motoristaTxt.value;
-  let motoristas = [];
 
   // ---------->> FUNÇÃO COM PARAMETRO <<----------
   if (validarMotorista(motorista)) {
@@ -79,51 +19,50 @@ function adicionarMotorista() {
   } else {
     motoristas.push(motorista);
 
-    primeiroOption.innerHTML = "";
-
     let option = document.createElement("option");
-    option.innerHTML = `${motorista}`;
+    option.innerHTML = motorista;
     resultadoArray.appendChild(option);
 
     motorista.innerHTML = "";
   }
 }
 
+// function quebrarLinhaVirgula(data) {
+//   //convert string to array and remove whitespace
+//   let dataToArray = data.split(',').map(item => item.trim());
+//   //convert array to string replacing comma with new line
+//   return dataToArray.join(`<br>`);
+// }
+
 function cadastrar() {
   let anoTxt = document.getElementById("anoTxt");
   let ano = Number(anoTxt.value);
   let modeloTxt = document.getElementById("modeloTxt");
-  let arTxt = document.getElementById("arTxt");
-  let portasTxt = document.getElementById("portasTxt");
-  let kitTxt = document.getElementById("kitTxt");
+  let simAr = document.getElementById("simAr");
+  let simPortas = document.getElementById("simPortas");
+  let simKit = document.getElementById("simKit");
   let resultadoCadastro = document.querySelector("div#ordenado");
 
+
+  // QB911940851BR
 
   let dadosMotorista = {
     ano: ano,
     modelo: modeloTxt.value,
-    ar: arTxt.checked,
-    portas: portasTxt.checked,
-    kit: kitTxt.checked,
+    motorista: motoristas,
+    ar: simAr.checked,
+    portas: simPortas.checked,
+    kit: simKit.checked,
   };
+  
+  let objetoSjon = JSON.stringify(dadosMotorista);
+  // let objetoFormatado = String(objetoSjon);
+  // let desiredData = quebrarLinhaVirgula(objetoFormatado);
 
   let cadastro = document.createElement("div");
-  cadastro.innerHTML = dadosMotorista;
-  resultadoCadastro.appendChild()
-
-  //     for (i = 0; i < 5; i++) {
-//       let frase = document.createElement("div");
-//       frase.id = "frase" + i;
-//       ordenado.appendChild(frase);
-//     }
-
-//     document.getElementById("frase1").innerHTML = `Ao todo temos ${tamanhoArray} números cadastrados.`
-//     document.getElementById("frase2").innerHTML = `O maior valor informado foi ${Math.max(...primeiroArray)}.`
-//     document.getElementById("frase3").innerHTML = `O menor valor informado foi ${Math.min(...primeiroArray)}.`
-//     document.getElementById("frase4").innerHTML = `Somando todos os valores temos ${resultadoSoma}.`
-//     document.getElementById("frase5").innerHTML = `A média dos valores digitados é ${media}.`
-
-
+  cadastro.className = "m-4";
+  cadastro.innerHTML = `dadosMotorista = ${objetoSjon}`;
+  resultadoCadastro.appendChild(cadastro);
 
 }
 
