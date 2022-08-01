@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Ricardo Rocker</title>
+</head>
+
+<body class="bg-secondary">
+
+    <header class="m-4 text-white text-center">
+        <strong class="h1">Seguro Automotivo</strong>
+    </header>
+
+    <section class="d-flex justify-content-center">
+
+        <div class="shadow-lg p-2 bg-white rounded bg-light" style="max-width: 800px; min-width: 400px;">
+
+            <div class="mx-2 my-3 row">
+                <span class="col-6">Ano: </span>
+                <input type="number" placeholder="Insira o ano" class="col-6" id="anoTxt">
+            </div>
+
+            <div class="mx-2 my-3 row">
+                <span class="col-6">Modelo: </span>
+                <input type="text" placeholder="Insira o modelo" class="col-6" id="modeloTxt">
+            </div>
+
+            <div class="mx-2 mt-3 row">
+                <span class="col-3 d-flex align-items-center">Motoristas: </span>
+                <input type="text" class="col-6 mr-3" placeholder="Insira os motoristas" id="motoristasTxt">
+                <div class="col-2">
+                    <button class="btn btn-info d-flex" style="height: 30px; font-size: 10px;" onclick="adicionarMotorista()">Adicionar</button>
+                </div>
+            </div>
+
+            <div class="mx-2 mt-3 row">
+                <span class="col-12 d-flex justify-content-center text-muted">Motoristas Cadastrados</span>
+            </div>
+
+            <div class="d-flex justify-content-center mb-2 mt-1">
+                <select name="" id="resultadoArray" size="4">
+                    <option value="" id="primeiroOption" class="my-2 mx-5"></option>
+                </select>
+            </div>
+
+            <div class="mx-2 my-3 row">
+                <span class="col-6">Ar Condicionado: </span>
+                <input type="radio" class="m-1" name="arTxt" id="simAr" checked>Possui
+                <input type="radio" class="m-1" name="arTxt" id="naoAr">Não Possui
+            </div>
+
+            <div class="mx-2 my-3 row">
+                <span class="col-6">4 Portas: </span>
+                <input type="radio" class="m-1" name="portasTxt" id="simPortas" checked>Possui
+                <input type="radio" class="m-1" name="portasTxt" id="naoPortas">Não Possui
+            </div>
+
+            <div class="mx-2 row">
+                <span class="col-6">Kit Multimídia: </span>
+                <input type="radio" class="m-1" name="kitTxt" id="simKit" checked>Possui
+                <input type="radio" class="m-1" name="kitTxt" id="naoKit">Não Possui
+            </div>
+
+            <div class="d-flex justify-content-center">
+                <div id="ordenado" class="m-2"></div>
+            </div>
+
+            <hr>
+
+            <div class=" d-flex justify-content-end">
+                <button class="btn btn-secondary mb-3 mr-2" onclick="limpar()">Limpar</button>
+                <button class="btn btn-info mb-3 mr-2" onclick="cadastrar()">Cadastrar</button>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer class="m-4 text-white text-center">
+        @RicardoRocker
+    </footer>
+
+    <script src="16-Objeto.js"></script>
+</body>
+
+</html>
