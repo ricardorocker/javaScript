@@ -23,24 +23,11 @@
     </section>
     <footer class="m-4 text-white text-center">@RicardoRocker</footer>
 
-    <script>
-        var data = new Date();
-        var horaAtual = data.getHours();
-
-        //  var horaAtual = 11;
-
-        var horaAtualTxt = document.querySelector("div", horaAtualTxt);
-        var imgHora = document.getElementById("imgHora");
-
-        horaAtualTxt.innerHTML = `Agora são ${horaAtual} horas`
-
-        if (horaAtual >= 18) {
-            imgHora.src = "Noite.jpg";
-        } else if (horaAtual <= 11) {
-            imgHora.src = "Dia.jpg";
-        } else {
-            imgHora.src = "Tarde.jpg";
-        }
+    <script src="09-ProjetoCondicaoHoraDoDia.js">
     </script>
+
+</body>
+
+
 </body>
 </html>

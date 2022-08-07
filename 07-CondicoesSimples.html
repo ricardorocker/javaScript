@@ -16,21 +16,11 @@
     <input type="text" name="pais" id="pais">
     <input type="button" value="Consultar" name="consultar" onclick="consultarPais()">
     <div id="resultado" class="mt-2">Resultado</div>
-    
-    <script>
-        function consultarPais(){
-            var paisOrigem = document.querySelector("input", pais);
-            var resultado = document.getElementById("resultado");
 
-            var txtpais = String(paisOrigem.value);
-
-            if(txtpais === "Brasil"){
-                resultado.innerHTML = `Como voce nasceu no ${txtpais} voce é Brasileiro!`
-            } else {
-                resultado.innerHTML = `Como voce nasceu no ${txtpais} voce é estrangeiro!`
-            }
-        }
+    <script src="07-CondicoesSimples.js">
     </script>
+
+</body>
 
 </body>
 

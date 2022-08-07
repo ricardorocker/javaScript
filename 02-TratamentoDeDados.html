@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,20 +12,12 @@
         }
     </style>
 </head>
+
 <body>
- <H1>INICIO PROGRAMA ORÇAMENTÁRIO</H1>
-    <script>
-        var nome = window.prompt("Escreva seu nome.");
-        var nomeSemEspaco = nome.replace(/\s+/g, ''); //REPLACE COM REGEX
-        var salario = Number(window.prompt("Digite suas receitas"));
-        var despesas = Number(window.prompt("Digite suas despesas."));
-        var sobra = salario - despesas;
+    <H1>INICIO PROGRAMA ORÇAMENTÁRIO</H1>
 
-        document.write(`Olá ${nome}, seu nome possui ${nomeSemEspaco.length} letras <br><br>s`); //LENGTH
-
-        document.write(`Seu salário é de ${salario}<br>`);
-        document.write(`Suas despesas são ${despesas}<br>`);
-        document.write(`Sua sobra é de ${sobra.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL'})}`); //FORMATAÇÃO MONETARIA - TOLOCALESTRING
+    <script src="02-TratamentoDeDados.js">
     </script>
 </body>
+
 </html>
