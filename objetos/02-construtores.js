@@ -24,6 +24,8 @@ console.log(aluno);
 console.log(aluno.media()); */
 
 
+
+
 /* ---> METÓDO 2 - CRIANDO CADA ALUNO PELO PARAMETRO DA FUNÇÃO CRIARALUNO
 function criarAluno(nome, n1, n2){
 
@@ -41,6 +43,9 @@ var aluno = criarAluno("Ricardo", 8.5, 9.5);
 
 console.log(aluno);
 console.log(aluno.media()); */
+
+
+
 
 /* ---> METÓDO 3 - CRIANDO CADA ALUNO DENTRO DO ARRAY TURMA, PELO PARAMETRO DA FUNÇÃO CRIARALUNO E PASSANDO POR CADA ELEMENTO DESSE ARRAY TURMA
 function criarAluno(nome, n1, n2){
@@ -72,7 +77,8 @@ for(var aluno of turma){
 
 
 
-//  ---> METÓDO 4 - CRIANDO CADA ALUNO INSTANCIANDO O OBJETO ALUNO
+
+//  ---> METÓDO 4 - CRIANDO CADA ALUNO INSTANCIANDO DO OBJETO ALUNO
 function aluno(nome, n1, n2) {
 
     this.nome = nome;
