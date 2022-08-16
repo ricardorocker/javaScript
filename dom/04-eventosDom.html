@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<!-- 
+    - CARREGAR FUNÇÃO SOMENTE QUANDO CARREGAR TODA A PAGINA
+    - ADDEVENTLISTENER
+-->
+    
+    <script>
+        function loadedPage(){
+           let loadedText =  document.getElementById("loadTest")
+           loadedText.innerHTML = "<hr> Função loadedPage chamada no onload, 'Clique na frase'";
+            
+        //    loadedText.onclick = changeText;
+           loadedText.addEventListener("click", changeText);
+
+        }
+
+        function changeText(){
+            this.innerHTML = "<hr> Função loadedPage chamada no onload e <b>alterada</b> pelo script com a função changeText, através do addEventerListener"
+        }
+    </script>
+</head>
+<body onload="loadedPage()">
+
+<!-- 
+    - ONLOAD
+    - ONMOUSEOVER
+    - ONMOUSEOUT 
+-->
+
+    <h1>Titulo</h1>
+
+
+    <p id="loadTest"></p>
+</body>
+</html>
