@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>    
+    window.onload = function () {
+        let d1 = document.getElementById("d1");
+
+        //elemento filho do d1 == h1 
+        let h1 = d1.children[0];
+
+        // elemento pai do h1 == d1
+        console.log(h1.parentElement);
+
+        let hs = document.getElementsByTagName("h1");
+
+        console.log(hs)
+
+        for (let h of hs){
+            console.log(h);
+
+            h.addEventListener("click", qualOpai);
+        }
+
+        function qualOpai(e){
+            // saber qual elemento estou clicando
+            let t = e.target;
+            console.log(t.parentElement);
+        }
+
+
+    }
+
+    </script>
+
+</head>
+
+<body>
+
+    <div id="d1">
+        <h1>Titulo 1</h1>
+        <p>Paragrafo 1</p>
+    </div>
+
+    <div id="d2">
+        <h1>Titulo 2</h1>
+        <p>Paragrafo 2</p>
+    </div>
+
+</body>
+
+</html>
