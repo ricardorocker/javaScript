@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- - ONCLICK
+    - ONCHANGE
+    - ONINPUT -->
+
+    <h1 onclick="this.style.color = 'green'">Clique em mim</h1>
+
+    <h2>Subtitulo em H2</h2>
+
+    <p id="p1">Paragrafo 1</p>
+    Usando onChange <input type="text" onchange="changeParagrafro(this)"> 
+    <br><br>   
+    Usando onInput <input type="text" oninput="changeParagrafro(this)">
+    <br><br>
+    <button onclick="hideButton(this)">Esconder botão</button>
+    <p class="paragrafo">Paragrafo 2</p>
+    <p class="paragrafo">Paragrafo 3</p>
+
+    <script src="02-eventosDom.js"></script>
+</body>
+</html>
