@@ -17,8 +17,10 @@ let alunos = [aluno1, aluno2, aluno3];
 
 console.log("alunos", alunos);
 
-function somaIdadeTurma(total, aluno){
-    return total + aluno.idade;
-}
+// function somaIdadeTurma(total, aluno){
+//     return total + aluno.idade;
+// }
+
+let somaIdadeTurma = (total, aluno) => total + aluno.idade; 
 
 console.log("Reduce alunos", alunos.reduce(somaIdadeTurma, 0))
